@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2018-02-01 17:01:57
+  from "/var/www/html/templates/tpl/index.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_5a731dd56ec981_83127534',
+  'file_dependency' => 
+  array (
+    '77556379f6ddfceaeb79436f56a32c16aac2b79c' => 
+    array (
+      0 => '/var/www/html/templates/tpl/index.tpl',
+      1 => 1517493716,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5a731dd56ec981_83127534 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,8 +29,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/semantic/semantic.css">
 		<link rel="stylesheet" type="text/css" href="css/main.css">
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/semantic/semantic.js"></script>
+		<?php echo '<script'; ?>
+ type="text/javascript" src="js/jquery.js"><?php echo '</script'; ?>
+>
+		<?php echo '<script'; ?>
+ type="text/javascript" src="js/semantic/semantic.js"><?php echo '</script'; ?>
+>
     </head>
     <body>
         <div class="ui one column centered celled grid">
@@ -42,7 +69,8 @@
             </div>
         </div>
 
-        <script type="text/javascript">
+        <?php echo '<script'; ?>
+ type="text/javascript">
 
             var countPeoples = 0;
 
@@ -56,7 +84,10 @@
                 $("#peoplesList").append('<tr id="#people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td></tr>');
             });
 
-        </script>
+        <?php echo '</script'; ?>
+>
 
     </body>
 </html>
+<?php }
+}
