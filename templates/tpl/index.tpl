@@ -46,14 +46,16 @@
 
             var countPeoples = 0;
 
-            function removePeople(object) {
-                $(object).remove();
-                countPeoples--;
+            function removePeople(number) {
+                if (countPeoples > 0) {                
+                    $("[name='people_" + number + "']").remove();
+                    countPeoples--;
+                }
             }
-
+            
             $("#plusPeople").on('click', function() {
                 countPeoples++;
-                $("#peoplesList").append('<tr id="#people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td></tr>');
+                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td><td><a href="#" onclick="removePeople(' + countPeoples + ');" class="ui red button">Remove</a></td></tr>');
             });
 
         </script>

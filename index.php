@@ -52,7 +52,6 @@
 
     }
 
-
     $CT->show("index.tpl");
 
 ?>
