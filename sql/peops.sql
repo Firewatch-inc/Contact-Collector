@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 01 2018 г., 16:28
+-- Время создания: Фев 02 2018 г., 15:04
 -- Версия сервера: 5.5.50-log
 -- Версия PHP: 7.0.8
 
@@ -47,7 +47,8 @@ CREATE TABLE IF NOT EXISTS `peoples` (
   `patronymic` varchar(30) NOT NULL,
   `telephone` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `post` varchar(255) NOT NULL
+  `post` varchar(255) NOT NULL,
+  `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
