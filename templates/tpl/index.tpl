@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Form</title>
+        <title>Форма для ввода данных о сотрудниках</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/semantic/semantic.css">
@@ -14,8 +14,13 @@
             <div class="column">
                 <form name="" method="POST" class="ui form">
                     <div class="field">
-                        <label>Наименование подразделения</label>
-                        <input type="text" name="departament" required>
+                        <label>Наименование подразделения (Вы можете выбрать своё подразделение, если оно было ранее добавлено кем-то из сотрудников, иначе просто впишите наименование своего подразделения и одно добавится)</label>
+                        <input type="text" name="departament" list="departaments" required>
+                        <datalist id="departaments">
+                            {foreach $departaments as $departament}
+                                <option value="{$departament['departament']}">{$departament['departament']}</option>
+                            {/foreach}
+                        </datalist>
                     </div>
                     <div class="field">
                         <fieldset>

@@ -29,7 +29,7 @@
                 "location" => $locations[$i]
             ];
         }
-
+    
         $result = true;
         $add_query = $DB->prepare("INSERT INTO `peoples` (`departament`, `second_name`, `first_name`, `patronymic`, `telephone`, `email`, `post`, `location`) VALUES (:departament, :sn, :fn, :pt, :tel, :email, :post, :location)");
         for ($i = 0; $i < $count; $i++) {
@@ -55,6 +55,7 @@
 
     }
 
+    $CT->assign("departaments", $DB->query("SELECT DISTINCT `departament` FROM `peoples`")->fetchAll(PDO::FETCH_ASSOC));
     $CT->show("index.tpl");
 
 ?>

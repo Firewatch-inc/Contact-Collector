@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-02 15:09:20
+/* Smarty version 3.1.29, created on 2018-02-02 15:36:08
   from "C:\OpenServer\domains\peoples.php\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7454f0959bf2_29712952',
+  'unifunc' => 'content_5a745b38a17bd0_05976176',
   'file_dependency' => 
   array (
     'bf3b86834b8073a321d027ab44148f95668ad241' => 
     array (
       0 => 'C:\\OpenServer\\domains\\peoples.php\\templates\\tpl\\index.tpl',
-      1 => 1517573359,
+      1 => 1517574964,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a7454f0959bf2_29712952 ($_smarty_tpl) {
+function content_5a745b38a17bd0_05976176 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Form</title>
+        <title>Форма для ввода данных о сотрудниках</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/semantic/semantic.css">
@@ -41,8 +41,32 @@ function content_5a7454f0959bf2_29712952 ($_smarty_tpl) {
             <div class="column">
                 <form name="" method="POST" class="ui form">
                     <div class="field">
-                        <label>Наименование подразделения</label>
-                        <input type="text" name="departament" required>
+                        <label>Наименование подразделения (Вы можете выбрать своё подразделение, если оно было ранее добавлено кем-то из сотрудников, иначе просто впишите наименование своего подразделения и одно добавится)</label>
+                        <input type="text" name="departament" list="departaments" required>
+                        <datalist id="departaments">
+                            <?php
+$_from = $_smarty_tpl->tpl_vars['departaments']->value;
+if (!is_array($_from) && !is_object($_from)) {
+settype($_from, 'array');
+}
+$__foreach_departament_0_saved_item = isset($_smarty_tpl->tpl_vars['departament']) ? $_smarty_tpl->tpl_vars['departament'] : false;
+$_smarty_tpl->tpl_vars['departament'] = new Smarty_Variable();
+$_smarty_tpl->tpl_vars['departament']->_loop = false;
+foreach ($_from as $_smarty_tpl->tpl_vars['departament']->value) {
+$_smarty_tpl->tpl_vars['departament']->_loop = true;
+$__foreach_departament_0_saved_local_item = $_smarty_tpl->tpl_vars['departament'];
+?>
+                                <option value="<?php echo $_smarty_tpl->tpl_vars['departament']->value['departament'];?>
+"><?php echo $_smarty_tpl->tpl_vars['departament']->value['departament'];?>
+</option>
+                            <?php
+$_smarty_tpl->tpl_vars['departament'] = $__foreach_departament_0_saved_local_item;
+}
+if ($__foreach_departament_0_saved_item) {
+$_smarty_tpl->tpl_vars['departament'] = $__foreach_departament_0_saved_item;
+}
+?>
+                        </datalist>
                     </div>
                     <div class="field">
                         <fieldset>

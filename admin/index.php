@@ -33,7 +33,7 @@
                     <th>Должность</th>
                     <th>Адрес</th>
                 </thead>
-                <?php $i = 0; foreach ($peoples as $people) {?>
+                <?php $i = 1; foreach ($peoples as $people) {?>
                     <tbody>
                         <tr>
                             <td><?= $i; ?></td>
