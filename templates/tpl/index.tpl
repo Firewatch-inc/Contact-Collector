@@ -15,7 +15,7 @@
                 <form name="" method="POST" class="ui form">
                     <div class="field">
                         <label>Наименование подразделения</label>
-                        <input type="text" name="departament">
+                        <input type="text" name="departament" required>
                     </div>
                     <div class="field">
                         <fieldset>

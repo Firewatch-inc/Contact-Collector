@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-02 14:58:12
+/* Smarty version 3.1.29, created on 2018-02-02 15:09:20
   from "C:\OpenServer\domains\peoples.php\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7452540e25e1_96557319',
+  'unifunc' => 'content_5a7454f0959bf2_29712952',
   'file_dependency' => 
   array (
     'bf3b86834b8073a321d027ab44148f95668ad241' => 
     array (
       0 => 'C:\\OpenServer\\domains\\peoples.php\\templates\\tpl\\index.tpl',
-      1 => 1517572690,
+      1 => 1517573359,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a7452540e25e1_96557319 ($_smarty_tpl) {
+function content_5a7454f0959bf2_29712952 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,7 +42,7 @@ function content_5a7452540e25e1_96557319 ($_smarty_tpl) {
                 <form name="" method="POST" class="ui form">
                     <div class="field">
                         <label>Наименование подразделения</label>
-                        <input type="text" name="departament">
+                        <input type="text" name="departament" required>
                     </div>
                     <div class="field">
                         <fieldset>
