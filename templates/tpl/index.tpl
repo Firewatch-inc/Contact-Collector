@@ -28,6 +28,8 @@
                                         <th>Должность</th>
                                         <th>Телефон</th>
                                         <th>Email</th>
+                                        <th>Адрес (местоположение)</th>
+                                        <th>Действие</th>
                                     </tr>
                                 </thead>
                                 <tbody id="peoplesList">
@@ -55,7 +57,7 @@
             
             $("#plusPeople").on('click', function() {
                 countPeoples++;
-                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td><td><a href="#" onclick="removePeople(' + countPeoples + ');" class="ui red button">Remove</a></td></tr>');
+                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td><td><input type="text" name="locations[]"></td><td><a href="#" onclick="removePeople(' + countPeoples + ');" class="ui red button">Удалить строку</a></td></tr>');
             });
 
         </script>

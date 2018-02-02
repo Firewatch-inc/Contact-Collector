@@ -11,6 +11,7 @@
         $posts       = $_POST['posts'];
         $telephones  = $_POST['tels'];
         $emails      = $_POST['emails'];
+        $locations   = $_POST['locations'];
         
         $count = count($posts);
         $peoples = array();
@@ -22,14 +23,15 @@
                     "fn" => $firstNames[$i], 
                     "pt" => $patronymics[$i]
                 ],
-                "post"  => $posts[$i],
-                "tel"   => $telephones[$i],
-                "email" => $emails[$i]
+                "post"     => $posts[$i],
+                "tel"      => $telephones[$i],
+                "email"    => $emails[$i],
+                "location" => $locations[$i]
             ];
         }
 
         $result = true;
-        $add_query = $DB->prepare("INSERT INTO `peoples` (`departament`, `second_name`, `first_name`, `patronymic`, `telephone`, `email`, `post`) VALUES (:departament, :sn, :fn, :pt, :tel, :email, :post)");
+        $add_query = $DB->prepare("INSERT INTO `peoples` (`departament`, `second_name`, `first_name`, `patronymic`, `telephone`, `email`, `post`, `location`) VALUES (:departament, :sn, :fn, :pt, :tel, :email, :post, :location)");
         for ($i = 0; $i < $count; $i++) {
 
             $add_query->bindValue(":departament", $peoples[$i]['dep']);
@@ -39,6 +41,7 @@
             $add_query->bindValue(":tel", $peoples[$i]['tel']);
             $add_query->bindValue(":email", $peoples[$i]['email']);
             $add_query->bindValue(":post", $peoples[$i]['post']);
+            $add_query->bindValue(":location", $peoples[$i]['location']);
             
             $result *= $add_query->execute();
         }

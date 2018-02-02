@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-01 17:25:45
+/* Smarty version 3.1.29, created on 2018-02-02 14:58:12
   from "C:\OpenServer\domains\peoples.php\templates\tpl\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a7323697983e6_64624048',
+  'unifunc' => 'content_5a7452540e25e1_96557319',
   'file_dependency' => 
   array (
     'bf3b86834b8073a321d027ab44148f95668ad241' => 
     array (
       0 => 'C:\\OpenServer\\domains\\peoples.php\\templates\\tpl\\index.tpl',
-      1 => 1517495144,
+      1 => 1517572690,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a7323697983e6_64624048 ($_smarty_tpl) {
+function content_5a7452540e25e1_96557319 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,6 +55,8 @@ function content_5a7323697983e6_64624048 ($_smarty_tpl) {
                                         <th>Должность</th>
                                         <th>Телефон</th>
                                         <th>Email</th>
+                                        <th>Адрес (местоположение)</th>
+                                        <th>Действие</th>
                                     </tr>
                                 </thead>
                                 <tbody id="peoplesList">
@@ -83,7 +85,7 @@ function content_5a7323697983e6_64624048 ($_smarty_tpl) {
             
             $("#plusPeople").on('click', function() {
                 countPeoples++;
-                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td><td><a href="#" onclick="removePeople(' + countPeoples + ');" class="ui red button">Remove</a></td></tr>');
+                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td><td><input type="text" name="locations[]"></td><td><a href="#" onclick="removePeople(' + countPeoples + ');" class="ui red button">Удалить строку</a></td></tr>');
             });
 
         <?php echo '</script'; ?>
