@@ -26,17 +26,6 @@
                         <fieldset>
                             <legend><h2>Сотрудники <a href="#" id="plusPeople"><i class="ui icon large plus"></i></a></h2></legend>
                             <table class="ui table">
-                                <thead>
-                                    <tr>
-                                        <th>№</th>
-                                        <th>ФИО</th>
-                                        <th>Должность</th>
-                                        <th>Телефон</th>
-                                        <th>Email</th>
-                                        <th>Адрес (местоположение)</th>
-                                        <th>Действие</th>
-                                    </tr>
-                                </thead>
                                 <tbody id="peoplesList">
                                 </tbody>
                             </table>
@@ -62,7 +51,7 @@
             
             $("#plusPeople").on('click', function() {
                 countPeoples++;
-                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><input type="text" name="posts[]" required></div></td><td><div class="field"><input type="text" name="tels[]"></div></td><td><div class="field"><input type="text" name="emails[]" required></div></td><td><input type="text" name="locations[]"></td><td><a href="#" onclick="removePeople(' + countPeoples + ');" class="ui red button">Удалить строку</a></td></tr>');
+                $("#peoplesList").append('<tr name="people_' + countPeoples + '"><td>' + countPeoples + '</td><td><div class="field"><label for="">Фамилия</label><input type="text" name="secondNames[]" required></div><div class="field"><label for="">Имя</label><input type="text" name="firstNames[]" required></div><div class="field"><label for="">Отчество</label><input type="text" name="patronymics[]" required></div></td><td><div class="field"><label>Должность</label><input type="text" name="posts[]" required></div></td><td><div class="field"><label>Телефон</label><input type="text" name="tels[]"></div></td><td><div class="field"><label>Email</label><input type="text" name="emails[]" required></div></td><td><div class="field"><label>Адрес (местоположение)</label><input type="text" name="locations[]"></div></td><td><a href="#" onclick="removePeople(' + countPeoples + ');"><i class="ui red icon huge trash"></i></a></td></tr>');
             });
 
         </script>
