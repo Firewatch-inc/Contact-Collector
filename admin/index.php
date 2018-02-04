@@ -17,12 +17,19 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <h1>Добро пожаловать</h1>
+        <h1>Список сотрудников</h1>
         <hr>
         <?php foreach ($peoplesByDepartament as $dep => $peoples) { ?>
         <fieldset>
             <legend><?= $dep; ?></legend>
             <table width="100%" border="1" cellpadding="10">
+                <col width="5%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
+                <col width="14%">
                 <thead>
                     <th style="text-align: center;">№</th>
                     <th>Фамилия</th>
@@ -41,7 +48,7 @@
                             <td><?= $people['first_name']; ?></td>
                             <td><?= $people['patronymic']; ?></td>
                             <td><?= $people['telephone']; ?></td>
-                            <td><?= $people['email']; ?></td>
+                            <td><a href="mailto:<?= $people['email']; ?>"><?= $people['email']; ?></a></td>
                             <td><?= $people['post']; ?></td>
                             <td><?= $people['location']; ?></td>
                         </tr>
