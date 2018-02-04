@@ -71,7 +71,7 @@
                                                 <td><?= $people['telephone']; ?></td>
                                                 <td><a href="mailto:<?= $people['email']; ?>"><?= $people['email']; ?></a></td>
                                                 <td><?= $people['post']; ?></td>
-                                                <td><?= $people['location']; ?></td>
+                                                <td><?= $people['location'] ? $people['location'] : "-" ; ?></td>
                                             </tr>
                                         </tbody>
                                     <?php ++$i; }; ?>
