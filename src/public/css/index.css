@@ -1,0 +1,18 @@
+
+
+#top-menu .item .ui.statistic .label, .value {
+    color: white;
+}
+
+.ui.inverted.menu {
+    border-radius: 0%;
+    margin-bottom: 0px;
+}
+
+.ui.vertical.menu {
+    width: 100%;
+}
+
+.ui.celled.grid {
+    margin: 0px;
+}
