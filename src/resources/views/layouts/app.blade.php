@@ -37,7 +37,7 @@
                         Контакты
                         <div class="menu">
                             <a class="item" href="{{ route('add') }}">Добавить</a>
-                            <a class="item" href="{{ route('list') }}">Просмотр</a>
+                            <a class="item" href="{{ route('contacts.index') }}">Просмотр</a>
                         </div>
                     </div>
                     <a class="item">
