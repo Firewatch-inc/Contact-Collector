@@ -13,4 +13,14 @@ class IndexPageController extends Controller
         return view('index');
     }
 
+    public function add()
+    {
+        return view('contacts.add');
+    }
+
+    public function list()
+    {
+        return view('contacts.list');
+    }
+
 }

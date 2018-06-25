@@ -28,7 +28,7 @@
         </div>
         <div class="ui two column celled grid">
             <div class="three wide inverted column">
-                <h2 align="center">Contact Collector</h2>
+                <h2 align="center"><a href="{{ route('index') }}">Contact Collector</a></h2>
                 <div class="ui vertical menu">
                     <div class="item">
                         <div class="ui input"><input type="text" placeholder="Поиск..."></div>
@@ -36,7 +36,8 @@
                     <div class="item">
                         Контакты
                         <div class="menu">
-                            <a class="item">Добавить</a>
+                            <a class="item" href="{{ route('add') }}">Добавить</a>
+                            <a class="item" href="{{ route('list') }}">Просмотр</a>
                         </div>
                     </div>
                     <a class="item">
@@ -56,8 +57,8 @@
                     </div>
                 </div>
             </div>
-            <div class="column">
-                
+            <div class="thirteen wide column">
+                @yield('content')
             </div>
         </div>
 
