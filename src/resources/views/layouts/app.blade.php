@@ -17,6 +17,11 @@
     </head>
     <body>
         <div id="top-menu" class="ui inverted menu">
+			<div class="header item">
+				<h2 align="center">
+					<a href="{{ route('index') }}">Contact Collector</a>
+				</h2>
+			</div>
             <div class="right menu">
                 <a class="item">
                     Экспорт
@@ -26,9 +31,8 @@
                 </a>
             </div>
         </div>
-        <div class="ui two column celled grid">
+        <div class="ui two column stackable celled grid">
             <div class="three wide inverted column">
-                <h2 align="center"><a href="{{ route('index') }}">Contact Collector</a></h2>
                 <div class="ui vertical menu">
                     <div class="item">
                         <div class="ui input"><input type="text" placeholder="Поиск..."></div>
@@ -40,19 +44,17 @@
                             <a class="item" href="{{ route('contacts.index') }}">Просмотр</a>
                         </div>
                     </div>
-                    <a class="item">
-                        <i class="grid layout icon"></i> Browse
-                    </a>
-                    <a class="item">
-                        Messages
-                    </a>
-                    <div class="ui dropdown item">
-                        More
-                        <i class="dropdown icon"></i>
+                    <div class="item">
+                        Категории
                         <div class="menu">
-                            <a class="item"><i class="edit icon"></i> Edit Profile</a>
-                            <a class="item"><i class="globe icon"></i> Choose Language</a>
-                            <a class="item"><i class="settings icon"></i> Account Settings</a>
+                            <a class="item" href="#">Добавить</a>
+                            <a class="item" href="#">Просмотр</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        Настройки
+                        <div class="menu">
+                            <a class="item" href="#">Кодовые словари</a>
                         </div>
                     </div>
                 </div>

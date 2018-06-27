@@ -22073,22 +22073,19 @@ ol.ui.horizontal.list li:before,
 .ui.celled.grid {
   width: 100%;
   margin: 1em 0em;
-  -webkit-box-shadow: 0px 0px 0px 1px #D4D4D5;
-  box-shadow: 0px 0px 0px 1px #D4D4D5;
+  
 }
 
 .ui.celled.grid > .row {
   width: 100% !important;
   margin: 0em;
   padding: 0em;
-  -webkit-box-shadow: 0px -1px 0px 0px #D4D4D5;
-  box-shadow: 0px -1px 0px 0px #D4D4D5;
+  
 }
 
 .ui.celled.grid > .column:not(.row),
 .ui.celled.grid > .row > .column {
-  -webkit-box-shadow: -1px 0px 0px 0px #D4D4D5;
-  box-shadow: -1px 0px 0px 0px #D4D4D5;
+	
 }
 
 .ui.celled.grid > .column:first-child,

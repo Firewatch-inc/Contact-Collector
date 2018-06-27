@@ -4,6 +4,14 @@
 
 @section('content')
 
+	@component('components.breadcrumbs', [
+		'parent' => 'Главная', 
+		'links' => [
+			['link' => 'Список контактов', 'href' => route('list')]
+		]
+	])
+	@endcomponent
+
     <div class="ui blue segment">
         <h1>Список контактов</h1>
         <hr>
