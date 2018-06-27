@@ -18,14 +18,14 @@
     <body>
         <div id="top-menu" class="ui inverted menu">
 			<div class="header item">
-				<a href="{{ route('index') }}">Contact Collector | @lang('messages.slogan')</a>
+				<a href="{{ route('index') }}">Contact Collector | @lang('messages.main_menu.slogan')</a>
 			</div>
             <div class="right menu">
                 <a class="item">
-                    Экспорт
+                    @lang('messages.main_menu.export')
                 </a>
                 <a class="item">
-                    Импорт
+                    @lang('messages.main_menu.import')
                 </a>
             </div>
         </div>
@@ -33,13 +33,13 @@
             <div class="three wide inverted column">
                 <div class="ui vertical menu">
                     <div class="item">
-                        <div class="ui input"><input type="text" placeholder="Поиск..."></div>
+                        <div class="ui input"><input type="text" placeholder="@lang('messages.left_menu.search')..."></div>
                     </div>
                     <div class="item">
                         Контакты
                         <div class="menu">
-                            <a class="item" href="{{ route('add') }}">Добавить</a>
-                            <a class="item" href="{{ route('contacts.index') }}">Просмотр</a>
+                            <a class="item" href="{{ route('add') }}">@lang('messages.left_menu.add_contact')</a>
+                            <a class="item" href="{{ route('contacts.index') }}">@lang('messages.left_menu.view_contact')</a>
                         </div>
                     </div>
                     <div class="item">
@@ -52,13 +52,13 @@
                     <div class="item">
                         Настройки
                         <div class="menu">
-                            <a class="item" href="{{ route('ltables') }}">Кодовые словари</a>
+                            <a class="item" href="{{ route('ltables') }}">@lang('messages.left_menu.code_dictionaries')</a>
 							<div class="ui dropdown item">
-								Язык
+								@lang('messages.left_menu.lang')
 								<i class="dropdown icon"></i>
 								<div class="menu">
 									<a class="item" href="{{ route('lang.switch', 'ru') }}"><i class="ru flag"></i> Русский </a>
-									<a class="item" href="{{ route('lang.switch', 'en') }}"><i class="us flag"></i> Английский </a>
+									<a class="item" href="{{ route('lang.switch', 'en') }}"><i class="us flag"></i> English </a>
 								</div>
 							</div>
                         </div>
