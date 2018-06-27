@@ -18,9 +18,7 @@
     <body>
         <div id="top-menu" class="ui inverted menu">
 			<div class="header item">
-				<h2 align="center">
-					<a href="{{ route('index') }}">Contact Collector</a>
-				</h2>
+				<a href="{{ route('index') }}">Contact Collector | All contacts under your hand</a>
 			</div>
             <div class="right menu">
                 <a class="item">
@@ -54,7 +52,15 @@
                     <div class="item">
                         Настройки
                         <div class="menu">
-                            <a class="item" href="#">Кодовые словари</a>
+                            <a class="item" href="{{ route('ltables') }}">Кодовые словари</a>
+							<div class="ui dropdown item">
+								Язык
+								<i class="dropdown icon"></i>
+								<div class="menu">
+									<a class="item"><i class="ru flag"></i> Русский </a>
+									<a class="item"><i class="us flag"></i> Английский </a>
+								</div>
+							</div>
                         </div>
                     </div>
                 </div>
@@ -67,6 +73,7 @@
         <script>
 
             $('.ui.dropdown').dropdown();
+			$('.menu .item').tab();
 
         </script>
 
