@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Pages;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\LSex;
 
 class IndexPageController extends Controller
 {
@@ -22,5 +23,13 @@ class IndexPageController extends Controller
     {
         return view('contacts.list');
     }
+	
+	public function ltables()
+	{
+		return view('settings.ltables', [
+			'lsex' => LSex::get(),
+			'lcategory' => [],
+		]);
+	}
 
 }
