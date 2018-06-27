@@ -18,7 +18,7 @@
     <body>
         <div id="top-menu" class="ui inverted menu">
 			<div class="header item">
-				<a href="{{ route('index') }}">Contact Collector | All contacts under your hand</a>
+				<a href="{{ route('index') }}">Contact Collector | @lang('messages.slogan')</a>
 			</div>
             <div class="right menu">
                 <a class="item">
@@ -57,8 +57,8 @@
 								Язык
 								<i class="dropdown icon"></i>
 								<div class="menu">
-									<a class="item"><i class="ru flag"></i> Русский </a>
-									<a class="item"><i class="us flag"></i> Английский </a>
+									<a class="item" href="{{ route('lang.switch', 'ru') }}"><i class="ru flag"></i> Русский </a>
+									<a class="item" href="{{ route('lang.switch', 'en') }}"><i class="us flag"></i> Английский </a>
 								</div>
 							</div>
                         </div>
