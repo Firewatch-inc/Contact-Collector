@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class LSexSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-			LSexSeeder::class
+		DB::table('LSex')->insert([
+			['description' => 'Мужской'],
+			['description' => 'Женский']
 		]);
     }
 }
