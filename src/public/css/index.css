@@ -9,6 +9,7 @@
     margin-bottom: 0px;
 }
 
+.ui.styled.accordion,
 .ui.vertical.menu {
     width: 100%;
 }
@@ -20,3 +21,4 @@
 .ui.table thead tr th:first-child {
     text-align: center;
 }
+

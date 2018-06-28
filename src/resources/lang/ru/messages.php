@@ -16,8 +16,13 @@ return [
 	
 	'left_menu' => [
 		'search' => 'Поиск',
+		'contacts' => 'Контакты',
 		'add_contact' => 'Добавить',
 		'view_contact' => 'Просмотр',
+		'categories' => 'Категории',
+		'add_category' => 'Добавить',
+		'view_category' => 'Просмотр',
+		'settings' => 'Настройки',
 		'code_dictionaries' => 'Кодовые словари',
 		'lang' => 'Язык',
 	],

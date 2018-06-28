@@ -36,21 +36,25 @@
                         <div class="ui input"><input type="text" placeholder="@lang('messages.left_menu.search')..."></div>
                     </div>
                     <div class="item">
-                        Контакты
+						@lang('messages.left_menu.contacts')
                         <div class="menu">
                             <a class="item" href="{{ route('add') }}">@lang('messages.left_menu.add_contact')</a>
                             <a class="item" href="{{ route('contacts.index') }}">@lang('messages.left_menu.view_contact')</a>
                         </div>
                     </div>
                     <div class="item">
-                        Категории
+						@lang('messages.left_menu.categories')
                         <div class="menu">
-                            <a class="item" href="#">Добавить</a>
-                            <a class="item" href="#">Просмотр</a>
+                            <a class="item" href="#">
+								@lang('messages.left_menu.add_category')
+							</a>
+                            <a class="item" href="#">
+								@lang('messages.left_menu.view_category')
+							</a>
                         </div>
                     </div>
                     <div class="item">
-                        Настройки
+						@lang('messages.left_menu.settings')
                         <div class="menu">
                             <a class="item" href="{{ route('ltables') }}">@lang('messages.left_menu.code_dictionaries')</a>
 							<div class="ui dropdown item">
@@ -73,7 +77,12 @@
         <script>
 
             $('.ui.dropdown').dropdown();
+            $('.ui.accordion').accordion();
 			$('.menu .item').tab();
+			
+			$('.message .close').on('click', function() {
+				$(this).closest('.message').transition('fade');
+			});
 
         </script>
 

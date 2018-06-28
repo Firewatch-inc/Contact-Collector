@@ -16,8 +16,13 @@ return [
 	
 	'left_menu' => [
 		'search' => 'Search',
+		'contacts' => 'Contacts',
 		'add_contact' => 'Add',
 		'view_contact' => 'View',
+		'categories' => 'Categories',
+		'add_category' => 'Add',
+		'view_category' => 'View',
+		'settings' => 'Settings',
 		'code_dictionaries' => 'Code dictionaries',
 		'lang' => 'Language',
 	],

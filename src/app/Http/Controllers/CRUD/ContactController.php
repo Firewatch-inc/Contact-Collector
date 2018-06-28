@@ -43,7 +43,7 @@ class ContactController extends Controller
     {
         Contact::create($request->all());
 
-        return redirect()->back();
+        return redirect()->back()->with(['success_msg' => 'Контакт успешно добавлен']);
     }
 
     /**

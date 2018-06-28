@@ -11,6 +11,18 @@
 		]
 	])
 	@endcomponent
+	
+	@if(session()->has('success_msg'))
+		<div class="ui positive message">
+			<i class="close icon"></i>
+			<div class="header">
+				Поздравляем!
+			</div>
+			<div class="content">
+				{{ session()->get('success_msg') }}
+			</div>
+		</div>
+	@endif
 
     <div class="ui green segment">
         <h1>Создание нового контакта</h1>
