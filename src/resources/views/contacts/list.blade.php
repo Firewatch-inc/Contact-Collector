@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Создание нового контакта')
+@section('title', 'Список контактов')
 
 @section('content')
 
@@ -40,8 +40,8 @@
                         <td>{{ date_format(new DateTime($contact->birthday), 'd.m.Y') }}</td>
                         <td>{{ $contact->sex() }}</td>
                         <td class="right aligned">
-                            <form action="{{ route('contact.destroy', $contact) }}" method="POST"> 
-                                <input type="hidden" name="_method" value="DELETE">
+                            <form action="{{ route('contacts.destroy', $contact) }}" method="POST">
+                                {{ method_field('DELETE') }}
                                 {{ csrf_field('csrf') }}
                                 
                                 <input type="submit" value="Удалить" class="ui red button">

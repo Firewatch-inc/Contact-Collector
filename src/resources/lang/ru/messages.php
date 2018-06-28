@@ -20,7 +20,7 @@ return [
 		'add_contact' => 'Добавить',
 		'view_contact' => 'Просмотр',
 		'categories' => 'Категории',
-		'add_category' => 'Добавить',
+		'add_category' => 'Создать',
 		'view_category' => 'Просмотр',
 		'settings' => 'Настройки',
 		'code_dictionaries' => 'Кодовые словари',

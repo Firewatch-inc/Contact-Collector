@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\CRUD;
 
-use App\Models\LCategory;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,7 @@ class CategoryController extends Controller
     public function index()
     {
 		return view('categories.list', [
-			'lcategory' => LCategory::get()
+			'lcategory' => Category::get()
 		]);
     }
 
@@ -38,7 +38,7 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-		LCategory::create($request->all());
+		Category::create($request->all());
 		
 		return redirect()->back()->with(['success_msg' => 'Категория была создана']);
     }
@@ -46,10 +46,10 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\LCategory  $lCategory
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(LCategory $lCategory)
+    public function show(Category $category)
     {
         //
     }
@@ -57,10 +57,10 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\LCategory  $lCategory
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(LCategory $lCategory)
+    public function edit(Category $category)
     {
         //
     }
@@ -69,10 +69,10 @@ class CategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\LCategory  $lCategory
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, LCategory $lCategory)
+    public function update(Request $request, Category $category)
     {
         //
     }
@@ -80,11 +80,13 @@ class CategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\LCategory  $lCategory
+     * @param  \App\Models\LCategory  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(LCategory $lCategory)
+    public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->back();
     }
 }

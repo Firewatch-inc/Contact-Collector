@@ -30,22 +30,26 @@
         <form method="POST" action="{{ route('contacts.store') }}" class="ui form">
             {{ csrf_field('csrf') }}
             
-            <div class="field">
-                <label for="">Фамилия</label>
-                <input type="text" name="second_name" class="text">
-            </div>
-            <div class="field">
-                <label for="">Имя</label>
-                <input type="text" name="first_name" class="text">
-            </div>
-            <div class="field">
-                <label for="">Отчество</label>
-                <input type="text" name="patronymic" class="text">
-            </div>
+			<div class="three fields">
+				<div class="field">
+					<label for="">Фамилия</label>
+					<input type="text" name="second_name" class="text">
+				</div>
+				<div class="field">
+					<label for="">Имя</label>
+					<input type="text" name="first_name" class="text">
+				</div>
+				<div class="field">
+					<label for="">Отчество</label>
+					<input type="text" name="patronymic" class="text">
+				</div>
+			</div>
+			
             <div class="field">
                 <label for="">Дата рождения</label>
                 <input type="date" name="birthday" class="text">
             </div>
+			
             <div class="field">
                 <label for="">Пол</label>
                 <select name="id_sex">
@@ -56,7 +60,7 @@
             </div>
 
             <div class="field">
-                <input type="submit" value="Добавить" class="ui primary fluid button">
+                <input type="submit" value="Добавить контакт" class="ui primary fluid button">
             </div>
         </form>
     </div>

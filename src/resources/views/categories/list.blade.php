@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Создание нового контакта')
+@section('title', 'Список категорий')
 
 @section('content')
 
@@ -21,6 +21,7 @@
 				<tr>
 					<th>№</th>
 					<th>Наименование</th>
+					<th class="right aligned">Действие</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -29,6 +30,14 @@
 					<tr>
 						<td>{{ $i++ }}</td>
 						<td>{{ $category['description'] }}</td>
+						<td class="right aligned">
+                            <form onsubmit="return confirm('Удалить?')" action="{{ route('categories.destroy', $category) }}" method="POST">
+                                {{ method_field('DELETE') }}
+                                {{ csrf_field() }}
+                                
+                                <input type="submit" value="Удалить" class="ui red button">
+                            </form>
+						</td>
 					</tr>
 				@empty
 					<tr>

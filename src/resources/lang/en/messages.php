@@ -20,7 +20,7 @@ return [
 		'add_contact' => 'Add',
 		'view_contact' => 'View',
 		'categories' => 'Categories',
-		'add_category' => 'Add',
+		'add_category' => 'Create',
 		'view_category' => 'View',
 		'settings' => 'Settings',
 		'code_dictionaries' => 'Code dictionaries',
