@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Pages;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\LSex;
+use App\Models\LCategory;
 
 class IndexPageController extends Controller
 {
@@ -28,7 +29,7 @@ class IndexPageController extends Controller
 	{
 		return view('settings.ltables', [
 			'lsex' => LSex::get(),
-			'lcategory' => [],
+			'lcategory' => LCategory::paginate(10),
 		]);
 	}
 
