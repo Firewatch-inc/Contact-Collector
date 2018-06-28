@@ -24,6 +24,8 @@
                     <th>Фамилия</th>
                     <th>Имя</th>
                     <th>Отчество</th>
+                    <th>Дата рождения</th>
+                    <th>Пол</th>
                     <th class="right aligned">Действие</th>
                 </tr>
             </thead>
@@ -35,6 +37,8 @@
                         <td>{{ $contact->second_name }}</td>
                         <td>{{ $contact->first_name }}</td>
                         <td>{{ $contact->patronymic }}</td>
+                        <td>{{ date_format(new DateTime($contact->birthday), 'd.m.Y') }}</td>
+                        <td>{{ $contact->sex() }}</td>
                         <td class="right aligned">
                             <form action="{{ route('contact.destroy', $contact) }}" method="POST"> 
                                 <input type="hidden" name="_method" value="DELETE">

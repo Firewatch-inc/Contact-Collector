@@ -31,6 +31,20 @@
                 <input type="text" name="patronymic" class="text">
             </div>
             <div class="field">
+                <label for="">Дата рождения</label>
+                <input type="date" name="birthday" class="text">
+            </div>
+            <div class="field">
+                <label for="">Пол</label>
+                <select name="id_sex">
+                    @foreach ($lsex as $sex)
+                        <option value="{{ $sex->id_sex }}">{{ $sex->description }}</option>
+                    @endforeach
+                </select>
+            </div>
+
+
+            <div class="field">
                 <input type="submit" value="Добавить" class="ui primary fluid button">
             </div>
         </form>

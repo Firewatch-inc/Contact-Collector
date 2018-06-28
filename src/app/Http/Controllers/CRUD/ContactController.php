@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\CRUD;
 
 use App\Models\Contact;
+use App\Models\LSex;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -27,7 +28,9 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view('contacts.add', [
+            'lsex' => LSex::orderBy('id_sex')->get()
+        ]);
     }
 
     /**

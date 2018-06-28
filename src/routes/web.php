@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', 'Pages\IndexPageController@index')->name('index');
-Route::get('/add', 'Pages\IndexPageController@add')->name('add');
+Route::get('/add', 'CRUD\ContactController@create')->name('add');
 Route::get('/list', 'Pages\IndexPageController@list')->name('list');
 Route::get('/ltables', 'Pages\IndexPageController@ltables')->name('ltables');
 
