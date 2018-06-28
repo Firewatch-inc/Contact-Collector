@@ -10,4 +10,8 @@ class LCategory extends Model
 	protected $primaryKey = 'id_category';
     public $timestamps = false;
     
+	protected $fillable = [
+		'description'
+	];
+	
 }

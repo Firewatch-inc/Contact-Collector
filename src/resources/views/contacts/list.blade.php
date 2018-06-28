@@ -7,7 +7,7 @@
 	@component('components.breadcrumbs', [
 		'parent' => 'Главная', 
 		'links' => [
-			['link' => 'Список контактов', 'href' => route('list')]
+			['link' => 'Список контактов', 'href' => route('contacts.index')]
 		]
 	])
 	@endcomponent

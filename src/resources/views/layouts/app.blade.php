@@ -38,17 +38,17 @@
                     <div class="item">
 						@lang('messages.left_menu.contacts')
                         <div class="menu">
-                            <a class="item" href="{{ route('add') }}">@lang('messages.left_menu.add_contact')</a>
+                            <a class="item" href="{{ route('contacts.create') }}">@lang('messages.left_menu.add_contact')</a>
                             <a class="item" href="{{ route('contacts.index') }}">@lang('messages.left_menu.view_contact')</a>
                         </div>
                     </div>
                     <div class="item">
 						@lang('messages.left_menu.categories')
                         <div class="menu">
-                            <a class="item" href="#">
+                            <a class="item" href="{{ route('categories.create') }}">
 								@lang('messages.left_menu.add_category')
 							</a>
-                            <a class="item" href="#">
+                            <a class="item" href="{{ route('categories.index') }}">
 								@lang('messages.left_menu.view_category')
 							</a>
                         </div>

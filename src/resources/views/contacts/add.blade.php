@@ -7,7 +7,7 @@
 	@component('components.breadcrumbs', [
 		'parent' => 'Главная', 
 		'links' => [
-			['link' => 'Добавление контакта', 'href' => route('add')]
+			['link' => 'Добавление контакта', 'href' => route('contacts.create')]
 		]
 	])
 	@endcomponent
@@ -54,7 +54,6 @@
                     @endforeach
                 </select>
             </div>
-
 
             <div class="field">
                 <input type="submit" value="Добавить" class="ui primary fluid button">
