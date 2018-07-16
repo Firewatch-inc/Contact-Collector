@@ -20,21 +20,21 @@
 			<div class="header item">
 				<a href="{{ route('index') }}">Contact Collector | @lang('messages.main_menu.slogan')</a>
 			</div>
-            <div class="right menu">
-                <a class="item">
-                    @lang('messages.main_menu.export')
-                </a>
-                <a class="item">
-                    @lang('messages.main_menu.import')
-                </a>
-            </div>
+            {{--<div class="right menu">--}}
+                {{--<a class="item">--}}
+                    {{--@lang('messages.main_menu.export')--}}
+                {{--</a>--}}
+                {{--<a class="item">--}}
+                    {{--@lang('messages.main_menu.import')--}}
+                {{--</a>--}}
+            {{--</div>--}}
         </div>
         <div class="ui two column stackable celled grid">
             <div class="three wide inverted column">
                 <div class="ui vertical menu">
-                    <div class="item">
-                        <div class="ui input"><input type="text" placeholder="@lang('messages.left_menu.search')..."></div>
-                    </div>
+                    {{--<div class="item">--}}
+                        {{--<div class="ui input"><input type="text" placeholder="@lang('messages.left_menu.search')..."></div>--}}
+                    {{--</div>--}}
                     <div class="item">
 						@lang('messages.left_menu.contacts')
                         <div class="menu">

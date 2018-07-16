@@ -28,8 +28,7 @@ class IndexPageController extends Controller
 	public function ltables()
 	{
 		return view('settings.ltables', [
-			'lsex' => LSex::get(),
-			'lcategory' => LCategory::paginate(10),
+			'lsex' => LSex::get()
 		]);
 	}
 
