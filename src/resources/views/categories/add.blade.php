@@ -4,14 +4,6 @@
 
 @section('content')
 
-	@component('components.breadcrumbs', [
-		'parent' => 'Главная', 
-		'links' => [
-			['link' => 'Создание категории', 'href' => route('categories.create')]
-		]
-	])
-	@endcomponent
-	
 	@if(session()->has('success_msg'))
 		<div class="ui positive message">
 			<i class="close icon"></i>

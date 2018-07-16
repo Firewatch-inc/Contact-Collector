@@ -4,14 +4,6 @@
 
 @section('content')
 
-	@component('components.breadcrumbs', [
-		'parent' => 'Главная', 
-		'links' => [
-			['link' => 'Список категорий', 'href' => route('categories.index')]
-		]
-	])
-	@endcomponent
-
     <div class="ui blue segment">
         <h1>Список категорий</h1>
         <hr>

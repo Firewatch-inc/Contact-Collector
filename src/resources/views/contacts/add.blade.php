@@ -1,17 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Создание нового контакта')
+
+@section('title', 'Добавление нового контакта')
 
 @section('content')
 
-	@component('components.breadcrumbs', [
-		'parent' => 'Главная', 
-		'links' => [
-			['link' => 'Добавление контакта', 'href' => route('contacts.create')]
-		]
-	])
-	@endcomponent
-	
 	@if(session()->has('success_msg'))
 		<div class="ui positive message">
 			<i class="close icon"></i>
@@ -25,33 +18,33 @@
 	@endif
 
     <div class="ui green segment">
-        <h1>Создание нового контакта</h1>
+        <h1>@lang('messages.pages.contact_add.title')</h1>
         <hr>
         <form method="POST" action="{{ route('contacts.store') }}" class="ui form">
             {{ csrf_field('csrf') }}
             
 			<div class="three fields">
 				<div class="field">
-					<label for="">Фамилия</label>
+					<label for="">@lang('messages.contact_fields.sn')</label>
 					<input type="text" name="second_name" class="text">
 				</div>
 				<div class="field">
-					<label for="">Имя</label>
+					<label for="">@lang('messages.contact_fields.fn')</label>
 					<input type="text" name="first_name" class="text">
 				</div>
 				<div class="field">
-					<label for="">Отчество</label>
+					<label for="">@lang('messages.contact_fields.pt')</label>
 					<input type="text" name="patronymic" class="text">
 				</div>
 			</div>
 			
             <div class="field">
-                <label for="">Дата рождения</label>
+				<label for="">@lang('messages.contact_fields.db')</label>
                 <input type="date" name="birthday" class="text">
             </div>
 			
             <div class="field">
-                <label for="">Пол</label>
+				<label for="">@lang('messages.contact_fields.sex')</label>
                 <select name="id_sex">
                     @foreach ($lsex as $sex)
                         <option value="{{ $sex->id_sex }}">{{ $sex->description }}</option>
@@ -60,7 +53,7 @@
             </div>
 
             <div class="field">
-                <input type="submit" value="Добавить контакт" class="ui primary fluid button">
+                <input type="submit" value="@lang('messages.actions.add_contact')" class="ui primary fluid button">
             </div>
         </form>
     </div>

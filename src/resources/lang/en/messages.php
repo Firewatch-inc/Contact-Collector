@@ -28,9 +28,33 @@ return [
 	],
 	
 	
+	//Pages
+
+    'pages' => [
+        'contact_add' => [
+            'title' => 'Add contact',
+        ],
+        'contact_list' => [
+            'title'  => 'Contact list',
+            'remove' => 'Remove',
+            'remove_confirm' => 'Do you want remove this contact?',
+        ],
+
+
+    ],
 	
-	
-	
-	
+	'action' => 'Action',
+    'actions' => [
+        'add_contact' => 'Add'
+    ],
+
+    'contact_fields' => [
+        'sn' => 'Second name',
+        'fn' => 'First name',
+        'pt' => 'Patronymic',
+        'db' => 'Birthday',
+        'sex' => 'Sex',
+
+    ],
 
 ];

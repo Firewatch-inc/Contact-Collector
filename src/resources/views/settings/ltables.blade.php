@@ -4,14 +4,6 @@
 
 @section('content')
 
-	@component('components.breadcrumbs', [
-		'parent' => 'Главная', 
-		'links' => [
-			['link' => 'Кодовые словари', 'href' => route('ltables')]
-		]
-	])
-	@endcomponent
-	
     <div class="ui blue segment">
 		<div class="ui top attached tabular menu">
 			<a class="active item" data-tab="lsex">Список полов</a>
